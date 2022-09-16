@@ -1,0 +1,46 @@
+h2 {
+  text-align: center;
+}
+
+.heroes-menu {
+  padding: 0;
+  margin: auto;
+  max-width: 1000px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+a {
+  background-color: #3f525c;
+  border-radius: 2px;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  min-width: 70px;
+  margin: 0.5rem auto;
+  box-sizing: border-box;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+@media (min-width: 600px) {
+  a {
+    width: 18%;
+    box-sizing: content-box;
+  }
+}
+
+a:hover {
+  background-color: #000;
+}
