@@ -1,8 +1,22 @@
+/angular/tour-of-heroes/node_modules
+/angular/tour-of-heroes/.vscode
+/angular/tour-of-heroes/.angular
+/angular/tour-of-heroes/package-lock.json
+
+
 /node.js/note-app/node_modules
 /react.js/monster-rolodex/class-component/node_modules
 /react.js/monster-rolodex/functional-component/node_modules
 
 /typescript/maps/node_modules
-/typescript/maps/yarn.lock
 /typescript/maps/dist
 /typescript/maps/.parcel-cache
+
+/typescript/stats/node_modules
+/typescript/stats/build
+/typescript/stats/package-lock.json
+
+/tailwind-css/landing-page-01/node_modules
+/tailwind-css/landing-page-01/dist
+/tailwind-css/landing-page-01/package-lock.json
+
