@@ -16,6 +16,10 @@
 /typescript/stats/build
 /typescript/stats/package-lock.json
 
+/typescript/web/node_modules
+/typescript/web/dist
+/typescript/web/.parcel-cache
+
 /tailwind-css/landing-page-01/node_modules
 /tailwind-css/landing-page-01/dist
 /tailwind-css/landing-page-01/package-lock.json
