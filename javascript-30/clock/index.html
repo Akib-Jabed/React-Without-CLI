@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS and JS Clock</title>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+
+    <style>
+      html {
+        background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: "helvetica neue";
+        text-align: center;
+        font-size: 10px;
+      }
+
+      body {
+        margin: 0;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        flex: 1;
+        min-height: 100vh;
+      }
+
+      .clock {
+        width: 30rem;
+        height: 30rem;
+        border: 20px solid white;
+        border-radius: 50%;
+        position: relative;
+        padding: 2rem;
+        margin: auto;
+      }
+
+      .clock-face {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateY(-3px);
+      }
+
+      .hand {
+        width: 50%;
+        height: 6px;
+        top: 50%;
+        background: black;
+        position: absolute;
+        transform: rotate(90deg);
+        transform-origin: 100%;
+      }
+    </style>
+
+    <script>
+      const hourHandElement = document.querySelector(".hour-hand");
+      const minuteHandElement = document.querySelector(".minute-hand");
+      const secondHandElement = document.querySelector(".second-hand");
+
+      function setData() {
+        const now = new Date();
+
+        const second = now.getSeconds();
+        /*
+            / 60 => 60 sec should complete the circle
+            * 360 => full circle is 360 degree
+            + 90 => cause initially clock hand rotated with 90 degree
+        */
+        const degreeForSecond = (second / 60) * 360 + 90;
+        secondHandElement.style.transform = `rotate(${degreeForSecond}deg)`;
+
+        const minute = now.getMinutes();
+        const degreeForMinute = (minute / 60) * 360 + 90;
+        minuteHandElement.style.transform = `rotate(${degreeForMinute}deg)`;
+
+        const hour = now.getHours();
+        const degreeForHour = (hour / 12) * 360 + 90;
+        hourHandElement.style.transform = `rotate(${degreeForHour}deg)`;
+      }
+
+      setInterval(setData, 1000);
+    </script>
+  </body>
+</html>
