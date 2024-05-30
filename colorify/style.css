@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.circle {
+  border: 1px solid black;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+.action-btns {
+  margin-top: 10px;
+}
+button {
+  cursor: pointer;
+  padding: 4px 8px;
+}
