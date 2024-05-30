@@ -1,0 +1,39 @@
+body {
+  background-color: black;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.otp-inputs {
+  display: flex;
+}
+
+.otp-inputs .otp-input {
+  width: 20px;
+  text-align: center;
+  border: none;
+  margin-right: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px teal;
+}
+
+.otp-validate-message {
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.otp-validate-message.success {
+  border: 1px solid #58dd10;
+  color: green;
+}
+
+.otp-validate-message.fail {
+  border: 1px solid #e00d0d;
+  color: red;
+}
